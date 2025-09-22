@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyStore — Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h2 class="logo">MyStore</h2>
+      <ul>
+        <li><a href="index.html">🏠 Back to Store</a></li>
+      </ul>
+      <a class="cart-link" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <h1>My Cart</h1>
+    <div id="cart-items"></div>
+
+    <aside class="cart-summary">
+      <p id="summary-count">Items: 0</p>
+      <p id="summary-total">Total: $0.00</p>
+      <button id="checkout-btn">Checkout (simulate)</button>
+      <button id="clear-btn" class="muted">Clear Cart</button>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
