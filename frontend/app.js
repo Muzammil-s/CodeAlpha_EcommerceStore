@@ -261,16 +261,17 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();
 
   // ✅ User info display
-  const userBox = document.getElementById("user-box");
-  const usernameDisplay = document.getElementById("username-display");
-  const logoutBtn = document.getElementById("logout-btn");
+ const userBox = document.getElementById("user-box");
+const usernameDisplay = document.getElementById("username-display");
+const logoutBtn = document.getElementById("logout-btn");
 
-  const user = localStorage.getItem("user");
-  if (user) {
-    const parsed = JSON.parse(user);
-    usernameDisplay.textContent = parsed.username;
-    userBox.style.display = "inline-flex";
-  }
+const user = localStorage.getItem("user");
+if (user && usernameDisplay && userBox) {
+  const parsed = JSON.parse(user);
+  usernameDisplay.textContent = parsed.username;
+  userBox.style.display = "inline-flex";
+}
+
 
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {

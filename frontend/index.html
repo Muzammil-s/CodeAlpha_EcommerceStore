@@ -8,48 +8,31 @@
 </head>
 <body>
   <header>
-  <nav class="navbar">
-    <!-- 👤 User info box -->
-    <div id="user-box" class="user-box" style="display: none;">
-      <span id="username-display"></span>
-      <button id="logout-btn">Logout</button>
-    </div>
+    <nav class="navbar">
+      <!-- 👤 User info box -->
+      <div id="user-box" class="user-box" style="display: none;">
+        <span id="username-display"></span>
+        <button id="logout-btn">Logout</button>
+      </div>
 
-    <h2 class="logo">MyStore</h2>
-    <ul>
-      <li><a href="#" data-cat="all" class="nav-link">Home</a></li>
-      <li><a href="#" data-cat="T-Shirts" class="nav-link">T-Shirts</a></li>
-      <li><a href="#" data-cat="Shoes" class="nav-link">Shoes</a></li>
-      <li><a href="#" data-cat="Watches" class="nav-link">Watches</a></li>
-      <li><a href="#" data-cat="Bags" class="nav-link">Bags</a></li>
-    </ul>
-    <a class="cart-link" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
-  </nav>
-</header>
+      <h2 class="logo">MyStore</h2>
+      <ul>
+        <li><a href="#" data-cat="all" class="nav-link">Home</a></li>
+        <li><a href="#" data-cat="T-Shirts" class="nav-link">T-Shirts</a></li>
+        <li><a href="#" data-cat="Shoes" class="nav-link">Shoes</a></li>
+        <li><a href="#" data-cat="Watches" class="nav-link">Watches</a></li>
+        <li><a href="#" data-cat="Bags" class="nav-link">Bags</a></li>
+      </ul>
+      <a class="cart-link" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
 
   <main>
     <h1>Featured Products</h1>
     <div id="product-list" class="grid"></div>
   </main>
-  <script>document.addEventListener("DOMContentLoaded", () => {
-  const userInfo = document.getElementById("user-info");
-  const user = JSON.parse(localStorage.getItem("user"));
 
-  if (user) {
-    userInfo.innerHTML = `👤 ${user.username} (${user.email}) 
-      <button id="logout-btn">Logout</button>`;
-    
-    document.getElementById("logout-btn").addEventListener("click", () => {
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-      window.location.reload();
-    });
-  } else {
-    userInfo.innerHTML = `<a href="login.html">Login</a> / <a href="signup.html">Sign Up</a>`;
-  }
-});
-</script>
-
+  <!-- only app.js needed -->
   <script src="app.js"></script>
 </body>
 </html>
